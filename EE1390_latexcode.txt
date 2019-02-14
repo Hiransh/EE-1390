@@ -1,0 +1,104 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+\usepackage[utf8]{inputenc}
+
+\title{EE1390: Matrix Project}
+\author{Hiransh and Kuntal }
+\institute{IIT Hyderabad}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Contents}
+\tableofcontents
+\section{Question}
+\section{Theoretical Solution}
+\section{Plotted Diagram}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Question}
+\begin{block}{Original}
+For the hyperbola $9x^2 - 16y^2 = 144$, find the equation of the normal at point P(8, 3\sqrt{3}).
+\end{block}
+\begin{block}{Matrix form}
+Find the equation of the normal to the hyperbola
+$x^T\begin{bmatrix}
+  9 & 0 \\
+  0 & -16
+\end{bmatrix}x=144$ 
+drawn at the point P 
+\begin{bmatrix}
+8 \\
+3\sqrt{3}
+\end{bmatrix}.
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Theoretical Solution}
+Equation of hyperbola in matrix form:
+$x^T\begin{bmatrix}
+  9 & 0 \\
+  0 & -16
+\end{bmatrix}x=144$
+
+Now equation of tangent of any second degree curve: 
+$(P^TV + u^T)x +  P^Tu + F = 0$
+$u^T = 0$ 
+
+$P = \begin{bmatrix}
+8 \\
+3\sqrt{3}
+\end{bmatrix}$ and $V = \begin{bmatrix}
+  9 & 0 \\
+  0 & -16
+\end{bmatrix}$
+
+So direction vector of normal at point P is $P^TV = \begin{bmatrix}
+-72 \\
+83.1384
+\end{bmatrix}$
+
+Thus, the normal vector for normal at point P:
+$\begin{bmatrix}
+-72 \\
+83.1384
+\end{bmatrix}\begin{bmatrix}
+0 & 1 \\
+-1 & 0
+\end{bmatrix} = \begin{bmatrix}
+-83.1384 \\
+-72
+\end{bmatrix} = n$
+
+Final equation for the normal:
+
+$n^T(x - P) = 0$
+$\implies n^Tx = n^TP = -1039.2304$
+
+$\implies n^Tx = -1039.2304$
+\end{frame}
+
+\begin{frame}
+\frametitle{Plotted Diagram}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.60]{image1.jpeg}
+
+    \caption{Graphical plot of the curve}
+    \label{fig:my_label}
+\end{figure}
+
+\end{frame}
+
+\end{document}
+
